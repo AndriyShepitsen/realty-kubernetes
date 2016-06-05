@@ -5,6 +5,7 @@ metadata:
     name: elastic
   name: elastic
 spec:
+  type: LoadBalancer
   ports:
     - port: 9200
       targetPort: 9200
