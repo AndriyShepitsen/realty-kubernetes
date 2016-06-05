@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  labels:
+    name: elastic
+  name: elastic-controller
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        name: elastic
+    spec:
+      containers:
+      - image: oslick/elastic
+        name: elastic
+        ports:
+        - name: elastic
+          containerPort: 9200
+          hostPort: 9200
+        volumeMounts:
+            - name: elastic-storage
+              mountPath: /data/db
+      volumes:
+        - name: elastic-storage
+          gcePersistentDisk:
+            pdName: gke-kube-default-pool-e2b1a554-bq3n
+            fsType: ext4
