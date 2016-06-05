@@ -26,3 +26,8 @@ spec:
           gcePersistentDisk:
             pdName: realty-elastic
             fsType: ext4
+      resources:
+         requests:
+          cpu: "250m"
+         limits:
+          cpu: "300m"
