@@ -24,5 +24,5 @@ spec:
       volumes:
         - name: elastic-storage
           gcePersistentDisk:
-            pdName: gke-kube-default-pool-e2b1a554-bq3n
+            pdName: realty-elastic
             fsType: ext4
