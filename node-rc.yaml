@@ -18,5 +18,5 @@ spec:
         name: node
         ports:
         - containerPort: 8000
-          hostPort: 8
+          hostPort: 8000
           name: node
