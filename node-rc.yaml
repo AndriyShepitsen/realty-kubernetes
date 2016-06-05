@@ -3,7 +3,7 @@ kind: ReplicationController
 metadata:
   labels:
     name: node
-  name: node-controller
+  name: node
 spec:
   replicas: 1
   selector:
