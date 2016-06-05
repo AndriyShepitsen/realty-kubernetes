@@ -5,7 +5,7 @@ metadata:
     name: node
   name: node-controller
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     name: node
   template:
@@ -14,7 +14,7 @@ spec:
         name: node
     spec:
       containers:
-      - image: oslick/node
+      - image: oslick/node:8acce315762734875d22ba5e6417751eab6c305e
         name: node
         ports:
         - containerPort: 8000
