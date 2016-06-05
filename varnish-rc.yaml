@@ -21,5 +21,7 @@ spec:
              hostPort: 80
              name: varnish
            resources:
-             request:
-               cpu: 0.5
+            requests:
+             cpu: "250m"
+            limits:
+             cpu: "300m"
