@@ -14,6 +14,11 @@ spec:
       containers:
       - image: oslick/elastic
         name: elastic
+        resources:
+           requests:
+            cpu: "250m"
+           limits:
+            cpu: "300m"
         ports:
         - name: elastic
           containerPort: 9200
@@ -26,8 +31,3 @@ spec:
           gcePersistentDisk:
             pdName: realty-elastic
             fsType: ext4
-      resources:
-         requests:
-          cpu: "250m"
-         limits:
-          cpu: "300m"
