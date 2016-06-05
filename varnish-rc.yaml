@@ -22,4 +22,4 @@ spec:
              name: varnish
            resources:
              request:
-               cpu: 0.05
+               cpu: 50
