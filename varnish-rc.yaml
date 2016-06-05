@@ -3,7 +3,7 @@ kind: ReplicationController
 metadata:
   labels:
     name: varnish
-  name: varnish-controller
+  name: varnish
 spec:
   replicas: 1
   selector:
@@ -20,3 +20,6 @@ spec:
            - containerPort: 80
              hostPort: 80
              name: varnish
+           resources:
+             request:
+               cpu: 0.05
