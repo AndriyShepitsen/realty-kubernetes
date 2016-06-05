@@ -13,8 +13,10 @@ spec:
       labels:
         name: varnish
     spec:
-.t- dliub        name: varnish
-        ports:
-        - containerPort: 8000
-          hostPort: 9200
-          name: varnish
+         containers:
+         - image: gcr.io/realty3-2016/varnish:v1
+           name: varnish
+           ports:
+           - containerPort: 80
+             hostPort: 80
+             name: varnish
