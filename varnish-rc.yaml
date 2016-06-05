@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  labels:
+    name: varnish
+  name: varnish-controller
+spec:
+  replicas: 1
+  selector:
+    name: varnish
+  template:
+    metadata:
+      labels:
+        name: varnish
+    spec:
+.t- dliub        name: varnish
+        ports:
+        - containerPort: 8000
+          hostPort: 9200
+          name: varnish

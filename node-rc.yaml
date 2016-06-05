@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  labels:
+    name: node
+  name: node-controller
+spec:
+  replicas: 2
+  selector:
+    name: node
+  template:
+    metadata:
+      labels:
+        name: node
+    spec:
+      containers:
+      - image: oslick/node
+        name: node
+        ports:
+        - containerPort: 8000
+          hostPort: 8
+          name: node
