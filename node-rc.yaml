@@ -2,26 +2,21 @@ apiVersion: v1
 kind: ReplicationController
 metadata:
   labels:
-    name: node
-  name: node
+    name: repar
+  name: repar
 spec:
   replicas: 1
   selector:
-    name: node
+    name: repar
   template:
     metadata:
       labels:
-        name: node
+        name: repar
     spec:
       containers:
-      - image: oslick/node:8acce315762734875d22ba5e6417751eab6c305e
+      - image: gcr.io/realty3-2016/repar:v113
         name: node
         ports:
-        - containerPort: 8000
-          hostPort: 8000
-          name: node
-        resources:
-           requests:
-            cpu: "100m"
-           limits:
-            cpu: "100m"
+        - containerPort: 4444 
+          hostPort: 4444
+          name: repar

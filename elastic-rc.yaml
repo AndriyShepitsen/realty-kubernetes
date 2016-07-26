@@ -12,7 +12,7 @@ spec:
         name: elastic
     spec:
       containers:
-      - image: oslick/elastic
+      - image: elasticsearch
         name: elastic
         resources:
            requests:
@@ -29,5 +29,5 @@ spec:
       volumes:
         - name: elastic-storage
           gcePersistentDisk:
-            pdName: realty-elastic
+            pdName: realty-elastic-new
             fsType: ext4
