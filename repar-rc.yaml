@@ -5,7 +5,7 @@ metadata:
     name: repar
   name: repar
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     name: repar
   template:
@@ -14,9 +14,9 @@ spec:
         name: repar
     spec:
       containers:
-      - image: gcr.io/realty3-2016/repar:v113
-        name: node
+      - image: gcr.io/realty3-2016/repar:v1
+        name: repar
         ports:
-        - containerPort: 4444 
+        - containerPort: 4444
           hostPort: 4444
           name: repar
