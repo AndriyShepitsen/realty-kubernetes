@@ -14,20 +14,15 @@ spec:
       containers:
       - image: cassandra
         name: cassandra
-        resources:
-           requests:
-            cpu: "250m"
-           limits:
-            cpu: "250m"
         ports:
         - name: cassandra
           containerPort: 9042
           hostPort: 9042
         volumeMounts:
             - name: cassandra-storage
-              mountPath: /var/lib/cassandra 
+              mountPath: /var/lib/cassandra
       volumes:
         - name: cassandra-storage
           gcePersistentDisk:
-            pdName: realty-cassandra-new
+            pdName: realty-cassandra4
             fsType: ext4
